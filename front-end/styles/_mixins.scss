@@ -1,1 +1,38 @@
-// Mixins à définir
+@use "@/styles/variables" as *;
+
+/**
+* Breakpoints pour tablette et ordinateur, par défaut, les styles sont définis sur un écran de mobile
+*/
+
+// Breakpoint écran de tablette
+@mixin tablet {
+  @media (min-width: $breakpoint-tablet) {
+    @content;
+  }
+}
+// Breakpoint écran ordinateur
+@mixin desktop {
+  @media (min-width: $breakpoint-desktop) {
+    @content;
+  }
+}
+
+@mixin font-h1 {
+  font-weight: 700;
+  font-size: 2rem; // 32px
+}
+
+@mixin font-h2 {
+  font-size: 1.5rem; // 24px
+  font-weight: 500;
+}
+
+@mixin font-h3 {
+  font-size: 1rem; // 16px
+  font-weight: 500;
+}
+
+@mixin main-text {
+  font-weight: 400;
+  font-size: 0.875rem; // 14px
+}
