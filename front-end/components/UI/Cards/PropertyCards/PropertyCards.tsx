@@ -19,7 +19,7 @@ export const PropertyCards = () => {
       </div>
       <div className={styles.cardDetailZone}>
         <div className={styles.cardDetailTitleZone}>
-          <h2 className={styles.cardTitle}>Nom Propriété</h2>
+          <h4 className={styles.cardTitle}>Nom Propriété</h4>
           <p className={styles.cartSubtitle}>Localisation - du lieu</p>
         </div>
         <div className={styles.cardPriceZone}>

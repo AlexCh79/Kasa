@@ -7,9 +7,9 @@
   align-items: center;
   justify-content: center;
   width: 100%;
+  padding: 0 16px;
   gap: 24px;
   @include desktop {
-    max-width: 1113px;
     flex-direction: row;
     justify-self: center;
     flex-wrap: wrap;
