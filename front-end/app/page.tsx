@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import { Hero } from "@/components/Sections/Hero/Hero";
 
 export const metadata: Metadata = {
   title: "Page d'accueil",
@@ -6,5 +7,9 @@ export const metadata: Metadata = {
 };
 
 export default async function Home() {
-  return <div></div>;
+  return (
+    <>
+      <Hero />
+    </>
+  );
 }
