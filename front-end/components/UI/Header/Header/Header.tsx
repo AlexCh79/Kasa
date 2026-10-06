@@ -23,9 +23,9 @@ export const Header = () => {
         <Link href="/">
           <Image src="/logo.svg" width={114} height={40} alt="Kasa - Accueil" loading="eager" />
         </Link>
-        <ul className={styles.headerRight}>
+        <div className={styles.headerRight}>
           <NavLink href="/add-property">+ Ajouter un logement</NavLink>
-          <li className={styles.iconZone}>
+          <ul className={styles.iconZone}>
             <li>
               <Link href="/favorites" aria-label="Mes favoris" className={styles.icon}>
                 <HeartIcon />
@@ -47,8 +47,8 @@ export const Header = () => {
                 <ProfileIcon />
               </Link>
             </li>
-          </li>
-        </ul>
+          </ul>
+        </div>
       </nav>
       <MobileMenu />
     </header>

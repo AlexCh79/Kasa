@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import { Hero } from "@/components/Sections/Hero/Hero";
+import { GridCards } from "@/components/Sections/Grid/GridCards";
 
 export const metadata: Metadata = {
   title: "Page d'accueil",
@@ -10,6 +11,7 @@ export default async function Home() {
   return (
     <>
       <Hero />
+      <GridCards />
     </>
   );
 }
