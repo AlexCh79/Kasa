@@ -1,13 +1,10 @@
-import { getProperties } from "@/lib/api";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Page d'accueil",
+  description: "Page d'accueil de Kasa",
+};
 
 export default async function Home() {
-  const properties = await getProperties();
-  console.log(properties);
-
-  return (
-    <main>
-      <h1>Kasa</h1>
-      <p>{properties.length} logements chargés</p>
-    </main>
-  );
+  return <div></div>;
 }
