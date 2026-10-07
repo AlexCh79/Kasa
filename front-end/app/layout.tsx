@@ -18,8 +18,11 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="fr" className={inter.variable}>
       <body>
+        <a href="#main-content" className="skip-link">
+          Aller au contenu principal
+        </a>
         <Header />
-        <main>{children}</main>
+        <main id="main-content">{children}</main>
         <Footer />
       </body>
     </html>
