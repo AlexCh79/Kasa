@@ -18,6 +18,7 @@
   align-items: center;
   text-align: center;
   gap: 8px;
+  max-width: 742px;
 }
 
 .heroTitle {
@@ -38,7 +39,7 @@
   height: 458px;
   overflow: hidden;
   @include desktop {
-    width: 1115px;
+    max-width: 1115px;
   }
 }
 
