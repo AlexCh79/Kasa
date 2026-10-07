@@ -21,7 +21,7 @@ export const Header = () => {
           </li>
         </ul>
         <Link href="/">
-          <Image src="/logo.svg" width={114} height={40} alt="Kasa - Accueil" loading="eager" />
+          <Image src="/logo.svg" width={114} height={40} alt="Kasa - Accueil" />
         </Link>
         <div className={styles.headerRight}>
           <NavLink href="/add-property">+ Ajouter un logement</NavLink>

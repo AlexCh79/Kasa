@@ -1,8 +1,9 @@
 import { Metadata } from "next";
 import { Hero } from "@/components/Sections/Hero/Hero";
-import { GridCards } from "@/components/Sections/Grid/GridCards";
 import { HowItWorks } from "@/components/Sections/HowItWorks/HowItWorks";
-import { getProperties } from "@/lib/api";
+import { Suspense } from "react";
+import { PropertyList } from "@/components/Sections/Grid/PropertyList/PropertyList";
+import { Skeleton } from "@/components/Sections/Grid/Skeleton/Skeleton";
 
 export const metadata: Metadata = {
   title: "Page d'accueil",
@@ -11,14 +12,15 @@ export const metadata: Metadata = {
 
 /**
  * Page d'accueil du site
+ * Un skeleton s'affiche durant le chargement de la liste des propriétés
  */
-export default async function Home() {
-  const properties = await getProperties();
-
+export default function Home() {
   return (
     <>
       <Hero />
-      <GridCards properties={properties} />
+      <Suspense fallback={<Skeleton />}>
+        <PropertyList />
+      </Suspense>
       <HowItWorks />
     </>
   );
