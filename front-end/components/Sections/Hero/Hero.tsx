@@ -1,6 +1,9 @@
 import styles from "./Hero.module.scss";
 import Image from "next/image";
 
+/**
+ * Slogan de la page d'accueil
+ */
 export const Hero = () => {
   return (
     <section aria-label="Slogan" className={styles.hero}>

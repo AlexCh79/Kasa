@@ -1,13 +1,21 @@
-import { PropertyCards } from "@/components/UI/Cards/PropertyCards/PropertyCards";
+import { PropertyCard } from "@/components/UI/Cards/PropertyCard/PropertyCard";
 import styles from "./GridCard.module.scss";
+import type { PropertyBase } from "@/lib/types";
 
-export const GridCards = () => {
+interface GridCardsProps {
+  properties: PropertyBase[];
+}
+
+/**
+ * La liste des logements sur la page d'accueil
+ * @param properties - logements à afficher
+ */
+export const GridCards = ({ properties }: GridCardsProps) => {
   return (
     <section className={styles.grid} aria-label="Liste des propriétés">
-      <PropertyCards />
-      <PropertyCards />
-      <PropertyCards />
-      <PropertyCards />
+      {properties.map((property) => (
+        <PropertyCard key={property.id} property={property} />
+      ))}
     </section>
   );
 };

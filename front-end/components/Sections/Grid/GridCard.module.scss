@@ -2,16 +2,17 @@
 @use "@/styles/mixins" as *;
 
 .grid {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: 1fr;
   width: 100%;
+  max-width: 1115px;
+  margin: 0 auto;
   padding: 0 16px;
   gap: 24px;
+  @include tablet {
+    grid-template-columns: repeat(2, 1fr);
+  }
   @include desktop {
-    flex-direction: row;
-    justify-self: center;
-    flex-wrap: wrap;
+    grid-template-columns: repeat(3, 1fr);
   }
 }
