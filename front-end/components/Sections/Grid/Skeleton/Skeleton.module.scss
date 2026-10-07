@@ -1,0 +1,55 @@
+@use "@/styles/variables" as *;
+
+.card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border-radius: 10px;
+  background-color: $white;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  height: 176px; // même hauteur que la zone texte des vraies cartes
+  padding: 16px 24px 24px;
+}
+
+// Bloc gris avec un reflet qui glisse de droite à gauche
+.block {
+  border-radius: 4px;
+  background: linear-gradient(90deg, $grey-light 25%, $white 50%, $grey-light 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s ease-in-out infinite;
+}
+
+.picture {
+  aspect-ratio: 355 / 376; // même proportion que la vraie photo
+  border-radius: 0;
+}
+
+.title {
+  width: 70%;
+  height: 18px;
+}
+
+.location {
+  width: 50%;
+  height: 14px;
+}
+
+.price {
+  width: 30%;
+  height: 14px;
+  margin-top: auto; // en bas, comme le vrai prix
+}
+
+@keyframes shimmer {
+  from {
+    background-position: 100% 0;
+  }
+  to {
+    background-position: -100% 0;
+  }
+}

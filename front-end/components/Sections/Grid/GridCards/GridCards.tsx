@@ -1,5 +1,5 @@
 import { PropertyCard } from "@/components/UI/Cards/PropertyCard/PropertyCard";
-import styles from "./GridCard.module.scss";
+import styles from "./GridCards.module.scss";
 import type { PropertyBase } from "@/lib/types";
 
 interface GridCardsProps {
