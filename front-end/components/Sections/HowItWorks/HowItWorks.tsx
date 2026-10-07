@@ -1,8 +1,11 @@
 import styles from "./HowItWorks.module.scss";
 
+/**
+ * Explication du fonctionnement du site sur la page d'accueil
+ */
 export const HowItWorks = () => {
   return (
-    <section aria-label="Comment ça marche ?" className={styles.howSection}>
+    <section className={styles.howSection}>
       <div className={styles.howTitleZone}>
         <h2 className={styles.howTitle}>Comment ça marche ?</h2>
         <p className={styles.howSubtitle}>
