@@ -1,0 +1,56 @@
+@use "@/styles/variables" as *;
+@use "@/styles/mixins" as *;
+
+.heading {
+  @include main-text;
+  font-weight: 500;
+}
+
+// Le bouton reprend l'apparence du titre
+.toggle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0;
+  border: none;
+  background: none;
+  color: inherit;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.chevron {
+  transition: transform 300ms ease-out;
+}
+
+// Ouvert : le chevron pointe vers le haut
+.toggle[aria-expanded="true"] .chevron {
+  transform: rotate(180deg);
+}
+
+// Fermé : une ligne de grille de hauteur 0, contenu invisible
+.content {
+  display: grid;
+  grid-template-rows: 0fr;
+  visibility: hidden;
+  transition:
+    grid-template-rows 300ms ease-out,
+    visibility 300ms;
+}
+
+// Ouvert : la ligne prend la hauteur du contenu
+.open {
+  grid-template-rows: 1fr;
+  visibility: visible;
+}
+
+.inner {
+  overflow: hidden;
+
+  // Espace entre le titre et le contenu (masqué avec lui quand c'est fermé)
+  > :first-child {
+    margin-top: 16px;
+  }
+}

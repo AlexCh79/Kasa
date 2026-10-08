@@ -1,6 +1,7 @@
 import styles from "./DetailCard.module.scss";
 import type { PropertyDetail } from "@/lib/types";
 import Image from "next/image";
+import { Collapse } from "../../Collapse/Collapse";
 import { Tag } from "../../Tags/Tags";
 
 interface DetailCardProps {
@@ -32,19 +33,16 @@ export const DetailCard = ({ property }: DetailCardProps) => {
         </div>
         {property.description && <p className={styles.detailDescription}>{property.description}</p>}
       </div>
-      <div className={styles.detailGridContainer}>
-        <h2 className={styles.detailGridTitle}>Équipements</h2>
+      <Collapse title="Équipements">
         <ul className={styles.detailGrid}>
           {property.equipments.map((equipment) => (
-            <li key={equipment} className={styles.detailTags}>
+            <li key={equipment}>
               <Tag label={equipment} />
             </li>
           ))}
         </ul>
-      </div>
-      <div className={styles.detailGridContainer}>
-        <h2 className={styles.detailGridTitle}>Catégorie</h2>
-
+      </Collapse>
+      <Collapse title="Catégorie">
         <ul className={styles.detailGrid}>
           {property.tags.map((category) => (
             <li key={category}>
@@ -52,7 +50,7 @@ export const DetailCard = ({ property }: DetailCardProps) => {
             </li>
           ))}
         </ul>
-      </div>
+      </Collapse>
     </section>
   );
 };
