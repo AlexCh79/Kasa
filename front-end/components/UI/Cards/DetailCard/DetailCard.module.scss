@@ -52,17 +52,6 @@
   color: $black;
 }
 
-.detailGridTitle {
-  @include main-text;
-  font-weight: 500;
-  color: $black;
-}
-
-.detailTagsContainer {
-  grid-area: tag;
-  width: 100%;
-}
-
 .detailGrid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -70,10 +59,4 @@
   max-width: 316px;
   list-style: none;
   gap: 8px;
-}
-
-.detailGridContainer {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
 }
