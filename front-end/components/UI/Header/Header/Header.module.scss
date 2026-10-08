@@ -1,0 +1,72 @@
+@use "@/styles/variables" as *;
+@use "@/styles/mixins" as *;
+
+.header {
+  @include desktop {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+    width: 782px;
+    border-radius: 10px;
+    border: none;
+    background-color: $white;
+    padding: 8px 100px;
+    margin: 20px;
+  }
+}
+
+.headerContent {
+  display: none;
+  @include desktop {
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 594px;
+  }
+}
+
+.headerLeft,
+.headerRight {
+  display: inline-flex;
+  align-items: center;
+  list-style: none;
+  gap: 28px;
+  @include main-text;
+}
+
+.headerLeft {
+  color: $black;
+}
+
+.headerRight > :first-child {
+  color: $main-red;
+}
+
+.iconZone {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  list-style: none;
+}
+
+.icon {
+  display: flex;
+  padding: 3px;
+  color: $main-red;
+  transition:
+    color 300ms ease-out,
+    transform 300ms ease-out;
+  &:hover,
+  &:focus-visible {
+    transform: scale(1.2);
+    color: $dark-orange;
+  }
+}
+
+.line {
+  border: 1px solid $main-red;
+  width: 5px;
+  rotate: -90deg;
+  height: 0;
+}

@@ -1,0 +1,80 @@
+@use "@/styles/variables" as *;
+@use "@/styles/mixins" as *;
+
+.howSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: $white;
+  padding: 40px 16px;
+  gap: 40px;
+  border-radius: 10px;
+  margin: 40px auto;
+  width: calc(100% - 32px);
+  max-width: 1114px;
+}
+
+.howTitleZone {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  text-align: center;
+  width: 100%;
+  @include desktop {
+    max-width: 1034px;
+  }
+}
+
+.howTitle {
+  @include font-h2;
+  font-weight: 600;
+  color: $black;
+}
+
+.howSubtitle {
+  @include main-text;
+  color: $black;
+}
+
+.howCardContainer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 842px;
+  gap: 8px;
+  @include desktop {
+    flex-direction: row;
+    gap: 16px;
+  }
+}
+
+.howCard {
+  width: 100%;
+  height: 199px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: $dark-orange;
+  border: 1px solid $grey-light;
+  border-radius: 10px;
+  padding: 44px 22px;
+  gap: 17px;
+  @include desktop {
+    width: 270px;
+    flex: 1;
+  }
+}
+
+.howCardTitle {
+  color: $white;
+  @include font-h3;
+  font-size: 1.125rem;
+}
+
+.howCardSubtitle {
+  color: $white;
+  font-size: 0.75rem;
+  font-weight: 400;
+}

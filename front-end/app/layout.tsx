@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import { Footer } from "@/components/UI/Footer/Footer";
+import { Header } from "@/components/UI/Header/Header/Header";
 import "@/styles/globals.scss";
 
 const inter = Inter({
@@ -15,7 +17,14 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="fr" className={inter.variable}>
-      <body>{children}</body>
+      <body>
+        <a href="#main-content" className="skip-link">
+          Aller au contenu principal
+        </a>
+        <Header />
+        <main id="main-content">{children}</main>
+        <Footer />
+      </body>
     </html>
   );
 }

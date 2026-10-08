@@ -1,0 +1,19 @@
+@use "@/styles/variables" as *;
+@use "@/styles/mixins" as *;
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 8px 40px;
+  background-color: $white;
+  border-top: 1px solid $grey-light;
+}
+
+.footerContent {
+  font-size: 0.75rem; // 12px
+  color: $grey-dark;
+  font-weight: 500;
+}

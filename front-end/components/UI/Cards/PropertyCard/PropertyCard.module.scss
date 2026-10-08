@@ -1,0 +1,114 @@
+@use "@/styles/variables" as *;
+@use "@/styles/mixins" as *;
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 358px;
+  &:has(.link:focus-visible) {
+    outline: 2px solid $main-red;
+    outline-offset: 2px;
+  }
+  @include desktop {
+    max-width: 616px;
+  }
+}
+
+.cardPictureZone {
+  border-radius: 10px 10px 0 0;
+  background-color: $white;
+  border: none;
+  width: 100%;
+  aspect-ratio: 355/376;
+  position: relative;
+  overflow: hidden;
+}
+
+.cardDetailZone {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  height: 176px;
+  border-radius: 0 0 10px 10px;
+  padding: 16px 24px 24px 24px;
+  background-color: $white;
+}
+
+.cardDetailTitleZone {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.cardTitle {
+  font-weight: 500;
+  font-size: 1.125rem;
+  color: $black;
+}
+
+.cartSubtitle {
+  @include main-text;
+  color: $grey-dark;
+}
+
+.cardPriceZone {
+  display: inline-flex;
+  gap: 6px;
+}
+
+.cardPrice {
+  @include main-text;
+  font-weight: 500;
+  color: $black;
+}
+
+.cardUnit {
+  @include main-text;
+  color: $grey-dark;
+}
+
+.cardFavBtn {
+  background-color: $grey-light;
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  border-radius: 5px;
+  border: none;
+  padding: 8px 16px;
+  display: flex;
+  z-index: 10;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  &:hover,
+  &:focus-visible {
+    color: $main-red;
+  }
+}
+
+.cardPicture {
+  object-fit: cover;
+  object-position: center;
+}
+
+.link {
+  color: $black;
+  text-decoration: none;
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+  }
+  &:focus-visible {
+    outline: none;
+  }
+}
