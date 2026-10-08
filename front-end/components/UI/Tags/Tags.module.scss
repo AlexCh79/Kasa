@@ -1,0 +1,20 @@
+@use "@/styles/variables" as *;
+@use "@/styles/mixins" as *;
+
+.tag {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 8px 4px;
+  gap: 10px;
+  width: 100%;
+  min-height: 33px;
+  height: 100%;
+  border-radius: 5px;
+  border: none;
+  background-color: $grey-light;
+  font-size: 0.75rem; // 12px
+  font-weight: 400;
+  color: $grey-dark;
+}

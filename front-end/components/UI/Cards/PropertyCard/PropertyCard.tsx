@@ -34,7 +34,7 @@ export const PropertyCard = ({ property }: PropertyCardProps) => {
       <div className={styles.cardDetailZone}>
         <div className={styles.cardDetailTitleZone}>
           <h2 className={styles.cardTitle}>
-            <Link href={`/property/${slug}`} className={styles.link}>
+            <Link href={`/properties/${slug}`} className={styles.link}>
               {title}
             </Link>
           </h2>

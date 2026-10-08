@@ -36,3 +36,21 @@
   padding: 8px 16px;
   text-decoration: none;
 }
+
+.buttonIcon {
+  transition: transform 300ms ease-out;
+}
+
+.secondary {
+  background-color: $grey-light;
+  color: $grey-dark;
+  &:hover,
+  &:focus-visible {
+    background-color: $grey-hover;
+    color: $black;
+  }
+  &:hover .buttonIcon,
+  &:focus-visible .buttonIcon {
+    transform: translateX(-4px); // la flèche recule de 4px
+  }
+}
