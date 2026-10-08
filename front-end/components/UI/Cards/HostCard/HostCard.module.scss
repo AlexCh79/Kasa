@@ -1,0 +1,71 @@
+@use "@/styles/variables" as *;
+@use "@/styles/mixins" as *;
+
+.hostCard {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border-radius: 10px;
+  background-color: $white;
+  border: 1px solid $grey-light;
+  gap: 8px;
+  padding: 24px;
+  max-width: 358px;
+  @include desktop {
+    max-width: 345px;
+  }
+}
+
+.hostTitle {
+  @include font-h3;
+  color: $black;
+}
+
+.hostContent {
+  display: inline-flex;
+  align-items: center;
+  width: 100%;
+  gap: 18px;
+  padding: 16px 0;
+}
+
+.hostPictureContainer {
+  overflow: hidden;
+  width: 81px;
+  height: 82px;
+  border-radius: 10px;
+}
+
+.hostPicture {
+  object-position: center;
+}
+
+.hostName {
+  font-size: 1rem; // 16px
+  font-weight: 400;
+  color: $black;
+}
+
+.ratingWrapper {
+  background-color: $grey-light;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 39px;
+  border-radius: 10px;
+  padding: 8px;
+  gap: 4px;
+}
+
+.hostRating {
+  font-size: 1rem;
+  font-weight: 400;
+  color: $black;
+}
+
+.buttonZone {
+  display: inline-flex;
+  width: 100%;
+  justify-content: center;
+}

@@ -1,0 +1,18 @@
+@use "@/styles/variables" as *;
+@use "@/styles/mixins" as *;
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  width: 100%;
+  max-width: 1115px;
+  margin: 0 auto;
+  padding: 0 16px;
+  gap: 24px;
+  @include tablet {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @include desktop {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

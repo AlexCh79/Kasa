@@ -1,0 +1,68 @@
+@use "@/styles/variables" as *;
+@use "@/styles/mixins" as *;
+
+.mobile {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  padding: 16px;
+  gap: 40px;
+  background-color: $white;
+  @include desktop {
+    display: none;
+  }
+}
+
+.toggleButton {
+  background-color: transparent;
+  border: none;
+}
+
+.bar {
+  display: inline-flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.menu {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  width: 100%;
+  // Fermé : invisible, et rogné entièrement par le bas
+  top: 100%;
+  left: 0;
+  right: 0;
+  height: calc(100dvh - 100%);
+  padding: 0 16px;
+  z-index: 10;
+  background-color: $white;
+  visibility: hidden;
+  clip-path: inset(0 0 100% 0);
+  transition:
+    clip-path 300ms ease-out,
+    visibility 300ms;
+}
+
+.open {
+  visibility: visible;
+  clip-path: inset(0);
+}
+
+.list {
+  list-style: none;
+  width: 100%;
+
+  li {
+    color: $black;
+    text-decoration: none;
+    width: 100%;
+    padding: 28px 0;
+  }
+
+  li:not(:last-child) {
+    border-bottom: 1px solid $grey-light;
+  }
+}
