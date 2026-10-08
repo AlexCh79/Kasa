@@ -1,0 +1,45 @@
+@use "@/styles/variables" as *;
+@use "@/styles/mixins" as *;
+
+.propertyPage {
+  width: 100%;
+  max-width: 971px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 10px;
+  padding: 0 10px;
+  margin: 40px auto;
+  @include desktop {
+    display: grid;
+    grid-template-columns: 1fr 345px;
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas: "button .  " "carrousel  host" "property  .";
+    row-gap: 24px;
+    column-gap: 10px;
+  }
+}
+
+.propertyReturnButton {
+  @include desktop {
+    grid-area: button;
+  }
+}
+
+.carrouselContainer {
+  @include desktop {
+    grid-area: carrousel;
+  }
+}
+
+.detailContainer {
+  @include desktop {
+    grid-area: property;
+  }
+}
+
+.hostContainer {
+  @include desktop {
+    grid-area: host;
+  }
+}

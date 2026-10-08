@@ -1,0 +1,54 @@
+@use "@/styles/variables" as *;
+@use "@/styles/mixins" as *;
+
+.carrousel {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  @include desktop {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.mainPictureContainer {
+  position: relative;
+  aspect-ratio: 303 / 357;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.mainPicture {
+  object-fit: cover;
+  object-position: center;
+  border-radius: 10px;
+}
+
+.vignetsRow {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+  @include desktop {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 10px;
+  }
+}
+
+.vignetContainer {
+  position: relative;
+  aspect-ratio: 83.5 / 109;
+  overflow: hidden;
+  border-radius: 7px;
+  @include desktop {
+    aspect-ratio: auto;
+  }
+}
+
+.picture {
+  object-fit: cover;
+  object-position: center;
+  border-radius: 7px;
+}

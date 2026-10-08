@@ -8,9 +8,13 @@
   justify-content: center;
   align-items: center;
   width: 100%;
+  max-width: 358px;
   &:has(.link:focus-visible) {
     outline: 2px solid $main-red;
     outline-offset: 2px;
+  }
+  @include desktop {
+    max-width: 616px;
   }
 }
 
