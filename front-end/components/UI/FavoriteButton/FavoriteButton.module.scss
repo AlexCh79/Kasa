@@ -1,0 +1,27 @@
+@use "@/styles/variables" as *;
+@use "@/styles/mixins" as *;
+
+.button {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 32px;
+  height: 32px;
+  border: none;
+  border-radius: 5px;
+  background-color: $grey-light;
+  color: $black;
+  cursor: pointer;
+  transition: color 300ms ease-out;
+  &:hover {
+    color: $main-red;
+  }
+}
+
+.active {
+  color: $main-red;
+}

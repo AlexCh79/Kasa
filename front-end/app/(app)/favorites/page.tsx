@@ -21,7 +21,6 @@ const Favorites = async () => {
           votre prochain séjour est en route.
         </p>
       </div>
-
       <FavoritesList properties={properties} />
     </article>
   );
