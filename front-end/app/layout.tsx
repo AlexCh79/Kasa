@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { Footer } from "@/components/UI/Footer/Footer";
 import { Header } from "@/components/UI/Header/Header/Header";
+import { FavoritesProvider } from "@/context/FavoritesContext";
 import "@/styles/globals.scss";
 
 const inter = Inter({
@@ -21,9 +22,11 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <a href="#main-content" className="skip-link">
           Aller au contenu principal
         </a>
-        <Header />
-        <main id="main-content">{children}</main>
-        <Footer />
+        <FavoritesProvider>
+          <Header />
+          <main id="main-content">{children}</main>
+          <Footer />
+        </FavoritesProvider>
       </body>
     </html>
   );
