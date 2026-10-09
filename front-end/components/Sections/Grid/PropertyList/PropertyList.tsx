@@ -1,4 +1,4 @@
-import { getProperties } from "@/lib/api";
+import { getProperties } from "@/lib/properties";
 import { GridCards } from "../GridCards/GridCards";
 
 /**

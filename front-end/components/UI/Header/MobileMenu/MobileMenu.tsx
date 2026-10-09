@@ -75,6 +75,11 @@ export const MobileMenu = () => {
             </NavLink>
           </li>
           <li>
+            <NavLink href="/login" onClick={close}>
+              Se connecter
+            </NavLink>
+          </li>
+          <li>
             <Button
               href="/add-property"
               type="button"

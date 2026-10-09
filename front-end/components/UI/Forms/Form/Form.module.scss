@@ -117,3 +117,8 @@
     font-weight: 600;
   }
 }
+
+.formHint {
+  @include main-text;
+  color: $grey-dark;
+}

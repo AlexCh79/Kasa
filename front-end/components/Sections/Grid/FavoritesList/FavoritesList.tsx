@@ -1,7 +1,7 @@
 "use client";
 
 import { useFavorites } from "@/context/FavoritesContext";
-import type { PropertyBase } from "@/app/types/properties";
+import type { PropertyBase } from "@/types/types";
 import { GridCards } from "../GridCards/GridCards";
 import { Skeleton } from "../Skeleton/Skeleton";
 import { Button } from "@/components/UI/Button/Button";

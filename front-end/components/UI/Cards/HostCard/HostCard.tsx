@@ -1,4 +1,4 @@
-import { PropertyHost } from "@/app/types/properties";
+import { PropertyHost } from "@/types/types";
 import Image from "next/image";
 import styles from "./HostCard.module.scss";
 import { Button } from "../../Button/Button";

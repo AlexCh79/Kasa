@@ -6,7 +6,7 @@ import {
   getServerFavorites,
   saveFavorites,
   subscribeToFavorites,
-} from "@/lib/favorites";
+} from "@/utils/favorites";
 
 interface FavoritesContextValue {
   favorites: string[];

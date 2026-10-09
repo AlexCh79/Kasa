@@ -2,7 +2,7 @@
 
 import { useState, type KeyboardEvent } from "react";
 import Image from "next/image";
-import { getNextIndex, getPreviousIndex } from "@/lib/carrousel";
+import { getNextIndex, getPreviousIndex } from "@/utils/carrousel";
 import styles from "./Carrousel.module.scss";
 
 interface CarrouselProps {

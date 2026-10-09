@@ -1,5 +1,5 @@
 import styles from "./DetailCard.module.scss";
-import type { PropertyDetail } from "@/app/types/properties";
+import type { PropertyDetail } from "@/types/types";
 import Image from "next/image";
 import { Collapse } from "../../Collapse/Collapse";
 import { Tag } from "../../Tags/Tags";

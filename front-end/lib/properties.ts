@@ -1,5 +1,5 @@
 import { fetchApi } from "./api";
-import type { PropertyDetail, PropertyBase } from "@/app/types/properties";
+import type { PropertyDetail, PropertyBase } from "@/types/types";
 
 /**
  * Renvoie la liste de tous les logements.
