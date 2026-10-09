@@ -73,28 +73,6 @@
   color: $grey-dark;
 }
 
-.cardFavBtn {
-  background-color: $grey-light;
-  position: absolute;
-  top: 16px;
-  right: 16px;
-  width: 32px;
-  height: 32px;
-  cursor: pointer;
-  border-radius: 5px;
-  border: none;
-  padding: 8px 16px;
-  display: flex;
-  z-index: 10;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  &:hover,
-  &:focus-visible {
-    color: $main-red;
-  }
-}
-
 .cardPicture {
   object-fit: cover;
   object-position: center;

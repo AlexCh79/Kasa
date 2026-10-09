@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { getProperties, getPropertyBySlug } from "@/lib/api";
+import { getProperties, getPropertyBySlug } from "@/lib/properties";
 import { Button } from "@/components/UI/Button/Button";
 import { Carrousel } from "@/components/UI/Carrousel/Carrousel";
 import { DetailCard } from "@/components/UI/Cards/DetailCard/DetailCard";

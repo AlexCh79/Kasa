@@ -1,0 +1,124 @@
+@use "@/styles/variables" as *;
+@use "@/styles/mixins" as *;
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: $white;
+  border: 1px solid $grey-light;
+  width: 100%;
+  max-width: 358px;
+  border-radius: 10px;
+  padding: 32px 16px;
+  margin: 40px auto;
+  gap: 38px;
+  @include desktop {
+    max-width: 742px;
+  }
+}
+
+.formTitleWrapper {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 100%;
+  max-width: 390px;
+  gap: 8px;
+}
+
+.formTitle {
+  @include font-h1;
+  color: $main-red;
+}
+
+.formSubtitle {
+  @include main-text;
+  color: $black;
+}
+
+.formInputWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 360px;
+  gap: 4px;
+  text-align: left;
+}
+
+.formLabel {
+  @include main-text;
+  color: $black;
+  font-weight: 500;
+}
+
+.formInput {
+  display: inline-flex;
+  width: 100%;
+  max-width: 326px;
+  border: 1px solid $grey-light;
+  border-radius: 4px;
+  padding: 16px 10px;
+  background-color: $white;
+  color: $grey-dark;
+  @include main-text;
+}
+
+.formActionsWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 320px;
+  gap: 22px;
+}
+
+.formLinkWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+  width: 100%;
+}
+
+.formLink {
+  @include main-text;
+  color: $main-red;
+  text-decoration: none;
+  &:hover,
+  &:focus-visible {
+    font-weight: 600;
+    cursor: pointer;
+  }
+}
+
+.formBoxWrapper {
+  width: 100%;
+  max-width: 326px;
+  display: inline-flex;
+  padding: 4px 10px;
+  gap: 10px;
+}
+
+.formLinkCGU,
+.formCGU {
+  font-weight: 400;
+  font-size: 0.75rem; // 12 px
+  color: $grey-dark;
+}
+
+.formCGU {
+  text-decoration: underline;
+  &:hover,
+  &:focus-visible {
+    cursor: pointer;
+    font-weight: 600;
+  }
+}
+
+.formHint {
+  @include main-text;
+  color: $grey-dark;
+}
