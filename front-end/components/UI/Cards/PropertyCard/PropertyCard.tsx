@@ -1,6 +1,6 @@
 import styles from "./PropertyCard.module.scss";
 import Image from "next/image";
-import { PropertyBase } from "@/lib/types";
+import { PropertyBase } from "@/app/types/properties";
 import Link from "next/link";
 import { FavoriteButton } from "../../FavoriteButton/FavoriteButton";
 

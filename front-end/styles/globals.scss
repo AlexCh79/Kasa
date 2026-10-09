@@ -63,3 +63,9 @@ main {
     transition-duration: 0.01ms !important;
   }
 }
+
+/* Message d'erreur */
+.error {
+  color: $main-red;
+  @include font-h3;
+}

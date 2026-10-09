@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { getProperties } from "@/lib/api";
+import { getProperties } from "@/lib/properties";
 import { FavoritesList } from "@/components/Sections/Grid/FavoritesList/FavoritesList";
 import styles from "./favorites.module.scss";
 
