@@ -5,7 +5,7 @@ import { Button } from "@/components/UI/Button/Button";
 import Link from "next/link";
 import { registerAction } from "@/lib/authUser";
 import { InputText } from "../../Inputs/InputText/InputText";
-
+import { Box } from "../../Inputs/Box/Box";
 /**
  *  Formulaire d'inscription d'un nouvel utilisateur
  *  Affiche une erreur ou renvoie vers la page d'accueil si la connexion réussie
@@ -91,23 +91,18 @@ export const RegisterForm = () => {
         />
         <div className={styles.formActionsWrapper}>
           <div className={styles.formLinkWrapper}>
-            <div className={styles.formBoxWrapper}>
-              <input
-                type="checkbox"
-                checked={hasAcceptCGU}
-                id="acceptCGU"
-                name="acceptCGU"
-                required
-                className={styles.formBoxCGU}
-                onChange={(event) => setHasAcceptCGU(event.target.checked)}
-              />
-              <label htmlFor="acceptCGU" className={styles.formLinkCGU}>
-                J’accepte les{" "}
-                <Link href="/cgu" className={styles.formCGU}>
-                  conditions générales d’utilisation
-                </Link>
-              </label>
-            </div>
+            <Box
+              label="J’accepte les "
+              href="/cgu"
+              hrefLabel="conditions générales d’utilisation"
+              type="checkbox"
+              checked={hasAcceptCGU}
+              id="acceptCGU"
+              name="acceptCGU"
+              required
+              onChange={(event) => setHasAcceptCGU(event.target.checked)}
+            />
+
             {error && (
               <span role="alert" className={styles.error}>
                 {error}
