@@ -7,6 +7,7 @@ import Image from "next/image";
 import { Button } from "../../Button/Button";
 import Link from "next/link";
 import { LogoutButton } from "../Logout/Logout";
+import { ProfileLink } from "../ProfileLink/ProfileLink";
 
 /**
  * Menu mobile s'ouvre en plein écran
@@ -76,9 +77,7 @@ export const MobileMenu = () => {
             </NavLink>
           </li>
           <li>
-            <NavLink href="/login" onClick={close}>
-              Se connecter
-            </NavLink>
+            <ProfileLink onClick={close} variant="text" />
           </li>
           <li>
             <LogoutButton onLogout={close} />
