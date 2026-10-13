@@ -2,7 +2,7 @@
 import { InputText } from "../../Inputs/InputText/InputText";
 import { useState } from "react";
 import { Button } from "@/components/UI/Button/Button";
-import styles from "./ProfileForm.module.scss";
+import styles from "../Form.module.scss";
 import type { TokenPayload } from "@/types/users";
 import { splitName } from "@/utils/name";
 
@@ -22,7 +22,8 @@ const ProfileForm = ({ user }: ProfileFormProps) => {
   };
 
   return (
-    <form className={styles.profileForm} onSubmit={handleChange}>
+    <form className={styles.form} onSubmit={handleChange}>
+      <h1 className={styles.formTitle}>Modifier vos informations</h1>
       <InputText
         id="lastName"
         name="lastName"

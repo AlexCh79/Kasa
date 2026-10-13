@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import { InputText } from "../../Inputs/InputText/InputText";
 import Link from "next/link";
 import { loginAction } from "@/lib/authUser";
 import { Button } from "@/components/UI/Button/Button";
@@ -33,37 +34,28 @@ export const LoginForm = () => {
         </p>
       </div>
 
-      <div className={styles.formInputWrapper}>
-        <label htmlFor="email" className={styles.formLabel}>
-          Adresse email
-        </label>
-        <input
-          id="email"
-          type="email"
-          required
-          name="email"
-          autoComplete="email"
-          value={email}
-          className={styles.formInput}
-          onChange={(e) => setEmail(e.target.value)}
-        />
-      </div>
+      <InputText
+        id="email"
+        type="email"
+        required
+        name="email"
+        autoComplete="email"
+        value={email}
+        label="Adresse email"
+        onChange={(e) => setEmail(e.target.value)}
+      />
 
-      <div className={styles.formInputWrapper}>
-        <label htmlFor="password" className={styles.formLabel}>
-          Mot de passe
-        </label>
-        <input
-          id="password"
-          type="password"
-          autoComplete="current-password"
-          className={styles.formInput}
-          required
-          name="password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-        />
-      </div>
+      <InputText
+        id="password"
+        label="Mot de passe"
+        type="password"
+        autoComplete="current-password"
+        className={styles.formInput}
+        required
+        name="password"
+        value={password}
+        onChange={(e) => setPassword(e.target.value)}
+      />
 
       <div className={styles.formActionsWrapper}>
         <Button

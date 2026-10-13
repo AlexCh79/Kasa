@@ -4,6 +4,7 @@ import styles from "../Form.module.scss";
 import { Button } from "@/components/UI/Button/Button";
 import Link from "next/link";
 import { registerAction } from "@/lib/authUser";
+import { InputText } from "../../Inputs/InputText/InputText";
 
 /**
  *  Formulaire d'inscription d'un nouvel utilisateur
@@ -39,72 +40,55 @@ export const RegisterForm = () => {
             voyageurs.
           </p>
         </div>
-        <div className={styles.formInputWrapper}>
-          <label htmlFor="lastName" className={styles.formLabel}>
-            Nom
-          </label>
-          <input
-            id="lastName"
-            required
-            autoComplete="family-name"
-            name="lastName"
-            value={lastName}
-            className={styles.formInput}
-            onChange={(event) => setLastName(event.target.value)}
-          />
-        </div>
 
-        <div className={styles.formInputWrapper}>
-          <label htmlFor="firstName" className={styles.formLabel}>
-            Prénom
-          </label>
-          <input
-            id="firstName"
-            required
-            autoComplete="given-name"
-            name="firstName"
-            value={firstName}
-            className={styles.formInput}
-            onChange={(event) => setFirstName(event.target.value)}
-          />
-        </div>
+        <InputText
+          id="lastName"
+          required
+          label="Nom"
+          autoComplete="family-name"
+          name="lastName"
+          value={lastName}
+          className={styles.formInput}
+          onChange={(event) => setLastName(event.target.value)}
+        />
 
-        <div className={styles.formInputWrapper}>
-          <label htmlFor="email" className={styles.formLabel}>
-            Adresse email
-          </label>
-          <input
-            id="email"
-            type="email"
-            autoComplete="email"
-            required
-            name="email"
-            value={email}
-            className={styles.formInput}
-            onChange={(event) => setEmail(event.target.value)}
-          />
-        </div>
+        <InputText
+          label="Prénom"
+          id="firstName"
+          required
+          autoComplete="given-name"
+          name="firstName"
+          value={firstName}
+          className={styles.formInput}
+          onChange={(event) => setFirstName(event.target.value)}
+        />
 
-        <div className={styles.formInputWrapper}>
-          <label htmlFor="password" className={styles.formLabel}>
-            Mot de passe
-          </label>
-          <input
-            id="password"
-            type="password"
-            minLength={6}
-            autoComplete="new-password"
-            className={styles.formInput}
-            required
-            aria-describedby="password-hint"
-            name="password"
-            value={password}
-            onChange={(event) => setPassword(event.target.value)}
-          />
-          <p id="password-hint" className={styles.formHint}>
-            6 caractères minimum
-          </p>
-        </div>
+        <InputText
+          label="Adresse email"
+          id="email"
+          type="email"
+          autoComplete="email"
+          required
+          name="email"
+          value={email}
+          className={styles.formInput}
+          onChange={(event) => setEmail(event.target.value)}
+        />
+
+        <InputText
+          label="Mot de passe"
+          id="password"
+          type="password"
+          minLength={6}
+          autoComplete="new-password"
+          className={styles.formInput}
+          required
+          aria-describedby="password-hint"
+          name="password"
+          value={password}
+          onChange={(event) => setPassword(event.target.value)}
+          hint="6 caractères minimum"
+        />
         <div className={styles.formActionsWrapper}>
           <div className={styles.formLinkWrapper}>
             <div className={styles.formBoxWrapper}>
