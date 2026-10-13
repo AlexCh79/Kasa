@@ -1,20 +1,25 @@
-import { NextRequest, NextResponse } from "next/server";
+import { type NextRequest, NextResponse } from "next/server";
 
 // Liste des pages protégées
 const PROTECTED_ROUTES = ["/profile", "/messenger", "/add-property"];
 
-// Liste des page invité
+// Liste des pages invitées
 const GUEST_ROUTES = ["/login", "/register"];
 
-// Vrai si le chemin correspond à l'une des routes, ou à l'une de ses sous-pages.
-const matchesRoute = (pathname: string, routes: string[]) => {
-  routes.some((route) => pathname === route || pathname.startsWith(`${route}/`));
+/**
+ * Vrai si le chemin correspond à l'une des routes, ou à l'une de ses sous-pages.
+ * @param pathname  - chemin de la page demandée
+ * @param routes  - routes à vérifier par le proxy
+ * @returns vrai si le chemin correspond à une route à vérifier
+ */
+const matchesRoute = (pathname: string, routes: string[]): boolean => {
+  return routes.some((route) => pathname === route || pathname.startsWith(`${route}/`));
 };
 
 /**
  * Proxy pour rediriger l'utilisateur selon qu'il soit connecté ou non
  * @param request - Vérification de la présence d'un token dans les cookies
- * @returns page de connexion si non connecté
+ * @returns page demandée selon le statut de connexion sinon redirection
  */
 export default function proxy(request: NextRequest) {
   const isLoggedIn = request.cookies.has("token");
