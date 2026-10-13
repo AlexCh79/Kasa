@@ -27,3 +27,16 @@ export interface AuthFormState {
   error: string | null;
   email?: string;
 }
+
+/**
+ * Type de données stockées dans le jeton JWT
+ * * email est toujours présent : un compte ne peut être créé ni connecté sans email
+ * (l'API prévoit null par sécurité, mais seuls les hôtes de démo, sans mot de passe, n'en ont pas).
+ */
+export interface TokenPayload {
+  id: string;
+  role: string;
+  name: string;
+  email: string;
+  exp: number;
+}
