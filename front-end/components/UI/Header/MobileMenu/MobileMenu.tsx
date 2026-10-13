@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 import { Button } from "../../Button/Button";
 import Link from "next/link";
+import { LogoutButton } from "../Logout/Logout";
 
 /**
  * Menu mobile s'ouvre en plein écran
@@ -79,6 +80,10 @@ export const MobileMenu = () => {
               Se connecter
             </NavLink>
           </li>
+          <li>
+            <LogoutButton onLogout={close} />
+          </li>
+
           <li>
             <Button
               href="/add-property"

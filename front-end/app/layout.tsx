@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import { Footer } from "@/components/UI/Footer/Footer";
 import { Header } from "@/components/UI/Header/Header/Header";
 import { FavoritesProvider } from "@/context/FavoritesContext";
+import { AuthProvider } from "@/context/AuthContext";
 import "@/styles/globals.scss";
 
 const inter = Inter({
@@ -22,11 +23,13 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <a href="#main-content" className="skip-link">
           Aller au contenu principal
         </a>
-        <FavoritesProvider>
-          <Header />
-          <main id="main-content">{children}</main>
-          <Footer />
-        </FavoritesProvider>
+        <AuthProvider>
+          <FavoritesProvider>
+            <Header />
+            <main id="main-content">{children}</main>
+            <Footer />
+          </FavoritesProvider>
+        </AuthProvider>
       </body>
     </html>
   );

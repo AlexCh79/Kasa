@@ -4,6 +4,7 @@ import { NavLink } from "../NavLink/NavLink";
 import { HeartIcon, MessengerIcon, ProfileIcon } from "@/components/UI/Icons/Icons";
 import Image from "next/image";
 import Link from "next/link";
+import { LogoutButton } from "../Logout/Logout";
 
 /**
  * En-tête de la page du site en version bureau ou mobile/tablette
@@ -46,6 +47,9 @@ export const Header = () => {
               <Link href="/login" aria-label="Connexion" className={styles.icon}>
                 <ProfileIcon />
               </Link>
+            </li>
+            <li>
+              <LogoutButton />
             </li>
           </ul>
         </div>
