@@ -18,7 +18,8 @@
   font-weight: 500;
 }
 
-.inputText {
+.inputText,
+.inputTextArea {
   display: inline-flex;
   width: 100%;
   max-width: 360px;
@@ -28,6 +29,11 @@
   background-color: $white;
   color: $grey-dark;
   @include main-text;
+}
+
+.inputTextArea {
+  max-lines: 3;
+  overflow: scroll;
 }
 
 .inputHint {
