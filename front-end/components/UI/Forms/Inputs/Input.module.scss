@@ -18,7 +18,9 @@
   font-weight: 500;
 }
 
-.inputText {
+.inputText,
+.inputTextArea,
+.inputTextAdd {
   display: inline-flex;
   width: 100%;
   max-width: 360px;
@@ -28,6 +30,22 @@
   background-color: $white;
   color: $grey-dark;
   @include main-text;
+}
+
+.inputTextArea {
+  max-lines: 3;
+  overflow: scroll;
+}
+
+.inputTextAdd {
+  max-width: 188px;
+}
+
+.inputButtonWrapper {
+  display: inline-flex;
+  align-items: center;
+  width: 230px;
+  justify-content: space-between;
 }
 
 .inputHint {

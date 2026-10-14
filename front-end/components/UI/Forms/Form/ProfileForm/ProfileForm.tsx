@@ -64,7 +64,9 @@ const ProfileForm = ({ user }: ProfileFormProps) => {
           {error}
         </span>
       )}
-      <Button type="submit" label="Valider les modifications" />
+      <div className={styles.formBtnContainer}>
+        <Button type="submit" label="Valider les modifications" />
+      </div>
     </form>
   );
 };

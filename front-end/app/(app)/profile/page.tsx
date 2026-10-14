@@ -19,7 +19,9 @@ const Profile = async () => {
   if (!user) redirect("/login");
   return (
     <div className={styles.profilePage}>
-      <Button label="Retour" variant="secondary" icon="/icon_left_arrow.svg" href="/" />
+      <div className={styles.profileBtnContainer}>
+        <Button label="Retour" variant="secondary" icon="/icon_left_arrow.svg" href="/" />
+      </div>
       <ProfileForm user={user} />
     </div>
   );
