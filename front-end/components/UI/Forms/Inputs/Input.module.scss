@@ -1,0 +1,77 @@
+@use "@/styles/variables" as *;
+@use "@/styles/mixins" as *;
+
+.inputWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 360px;
+  gap: 4px;
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+.inputTextLabel {
+  @include main-text;
+  color: $black;
+  font-weight: 500;
+}
+
+.inputText {
+  display: inline-flex;
+  width: 100%;
+  max-width: 360px;
+  border: 1px solid $grey-light;
+  border-radius: 4px;
+  padding: 16px 10px;
+  background-color: $white;
+  color: $grey-dark;
+  @include main-text;
+}
+
+.inputHint {
+  @include main-text;
+  color: $grey-dark;
+}
+
+.boxWrapper {
+  width: 100%;
+  max-width: 326px;
+  display: inline-flex;
+  padding: 4px 10px;
+  gap: 10px;
+  align-items: center;
+}
+
+.boxLabel,
+.boxLink {
+  font-weight: 400;
+  font-size: 0.75rem; // 12 px
+  color: $grey-dark;
+}
+
+.boxLink {
+  text-decoration: underline;
+  &:hover,
+  &:focus-visible {
+    cursor: pointer;
+    font-weight: 600;
+  }
+}
+
+.boxInput {
+  appearance: none;
+  flex-shrink: 0;
+  width: 12px;
+  height: 12px;
+  margin: 0;
+  border-radius: 2px;
+  background-color: transparent;
+  cursor: pointer;
+  border: 1px solid $grey-dark;
+  transition: background-color 300ms ease-out;
+  &:checked {
+    background-color: $black;
+  }
+}

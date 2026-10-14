@@ -1,0 +1,12 @@
+@use "@/styles/variables" as *;
+@use "@/styles/mixins" as *;
+
+.profilePage {
+  width: 100%;
+  max-width: 971px;
+  display: flex;
+  flex-direction: column;
+  margin: 40px auto;
+  justify-content: center;
+  padding: 0 20px;
+}

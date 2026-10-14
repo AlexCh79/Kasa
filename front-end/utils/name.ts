@@ -10,6 +10,11 @@ export function joinName(firstName: string, lastName: string): string {
   return name;
 }
 
+/**
+ * Fonction pour séparer le prénom et le nom utilisateur
+ * @param name - le nom complet de l'utilisateur tel que renvoyé par l'API
+ * @returns le prénom et  le nom dans deux champs séparés.
+ */
 export function splitName(name: string) {
   const parts = name.trim().split(/\s+/).filter(Boolean);
   const [firstName = "", ...rest] = parts;

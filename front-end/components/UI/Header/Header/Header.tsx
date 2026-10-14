@@ -1,9 +1,11 @@
 import styles from "./Header.module.scss";
 import { MobileMenu } from "../MobileMenu/MobileMenu";
 import { NavLink } from "../NavLink/NavLink";
-import { HeartIcon, MessengerIcon, ProfileIcon } from "@/components/UI/Icons/Icons";
+import { HeartIcon, MessengerIcon } from "@/components/UI/Icons/Icons";
 import Image from "next/image";
 import Link from "next/link";
+import { LogoutButton } from "../Logout/Logout";
+import { ProfileLink } from "../ProfileLink/ProfileLink";
 
 /**
  * En-tête de la page du site en version bureau ou mobile/tablette
@@ -43,9 +45,10 @@ export const Header = () => {
               <span className={styles.line} aria-hidden="true"></span>
             </li>
             <li>
-              <Link href="/login" aria-label="Connexion" className={styles.icon}>
-                <ProfileIcon />
-              </Link>
+              <ProfileLink className={styles.icon} variant="icon" />
+            </li>
+            <li>
+              <LogoutButton />
             </li>
           </ul>
         </div>
