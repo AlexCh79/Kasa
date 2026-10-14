@@ -6,6 +6,11 @@ interface TextAreaProps extends ComponentProps<"textarea"> {
   label: string;
 }
 
+/**
+ * Composant réutilisable de formulaire de type label + Textarea
+ * @param id - identifiant du champ
+ * @param label - texte du label, relié au champ
+ */
 export const TextArea = ({ id, label, ...othersProps }: TextAreaProps) => {
   return (
     <div className={styles.inputWrapper}>
